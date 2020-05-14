@@ -1,0 +1,2 @@
+Dark yellow: #ff9800
+Light yellow: #fbc02d
