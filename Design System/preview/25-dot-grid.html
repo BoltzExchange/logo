@@ -1,0 +1,20 @@
+<!doctype html>
+<!-- @dsCard group="Brand" name="Dot-grid background" subtitle="Signature header pattern — 13×13px white-10 dots with mask fade" viewport="700x220" -->
+<html boltz-theme="default">
+<head><meta charset="utf-8"><link rel="stylesheet" href="preview.css"></head>
+<body><div class="card" style="position: relative; overflow: hidden;">
+  <!-- dot grid background (boltz signature) -->
+  <div style="
+      position: absolute; inset: 0; pointer-events: none; z-index: 0;
+      background-image: radial-gradient(var(--color-white-10) 1px, transparent 1px);
+      background-size: 13px 13px;
+      -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+              mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+  "></div>
+  <div style="position: relative; z-index: 1; display:flex; flex-direction: column; gap: 12px;">
+    <div class="label-upper">Dot-grid header background</div>
+    <h2 style="margin: 0; font-size: 28px; font-weight: 700;">Products</h2>
+    <p class="muted" style="font-size: 13px; margin: 0; max-width: 460px; line-height: 1.5;">Same swap engine, three doors in. The radial-dot pattern (13×13, white-10) with a linear mask is reused at every product-page header.</p>
+    <div class="mono" style="font-size: 11px; color: var(--color-white-60);">background: radial-gradient(white-10 1px, transparent 1px) 13px 13px</div>
+  </div>
+</div></body></html>

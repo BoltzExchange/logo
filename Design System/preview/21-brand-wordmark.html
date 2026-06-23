@@ -1,0 +1,34 @@
+<!doctype html>
+<!-- @dsCard group="Brand" name="Wordmark (default & pro)" subtitle="Yellow & gray gradient masks + full-color / mono variants" viewport="700x220" -->
+<html boltz-theme="default">
+<head><meta charset="utf-8"><link rel="stylesheet" href="preview.css"></head>
+<body><div class="card">
+  <div class="card-row" style="align-items:center; gap: 26px; justify-content: space-between;">
+    <div style="display:flex; align-items:center; gap: 18px;">
+      <!-- wordmark with yellow gradient mask (as in the live nav) -->
+      <div style="
+          width: 200px; height: 46px;
+          background: linear-gradient(180deg, var(--color-primary-lighter) 10%, var(--color-primary) 90%);
+          -webkit-mask: url(../assets/boltz-wordmark.svg) no-repeat center / contain;
+                  mask: url(../assets/boltz-wordmark.svg) no-repeat center / contain;
+      "></div>
+      <div class="muted" style="font-size: 11px;">wordmark · yellow gradient (production nav)</div>
+    </div>
+    <div style="display:flex; align-items:center; gap: 18px;">
+      <!-- pro wordmark uses gray gradient -->
+      <div boltz-theme="pro" style="
+          width: 200px; height: 46px;
+          background: linear-gradient(180deg, var(--color-secondary-200) 10%, var(--color-secondary-300) 90%);
+          -webkit-mask: url(../assets/boltz-wordmark.svg) no-repeat center / contain;
+                  mask: url(../assets/boltz-wordmark.svg) no-repeat center / contain;
+      "></div>
+      <div class="muted" style="font-size: 11px;">Pro variant · gray gradient</div>
+    </div>
+  </div>
+  <div class="card-row" style="gap: 22px; align-items: center; margin-top: 4px;">
+    <img src="../assets/boltz-logo.svg" style="height: 42px;" alt="">
+    <img src="../assets/boltz-logo-white.svg" style="height: 42px; padding: 6px 10px; background: var(--color-secondary-600); border-radius: 8px;" alt="">
+    <img src="../assets/boltz-logo-black.svg" style="height: 42px; padding: 6px 10px; background: #fff; border-radius: 8px;" alt="">
+    <span class="muted" style="font-size: 11px;">full-color · white-on-dark · black-on-light</span>
+  </div>
+</div></body></html>

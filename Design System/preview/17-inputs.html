@@ -1,0 +1,34 @@
+<!doctype html>
+<!-- @dsCard group="Components" name="Inputs & amount fields" subtitle="Amount with eyebrow + min/max chips, focused, invalid" viewport="700x240" -->
+<html boltz-theme="default">
+<head><meta charset="utf-8"><link rel="stylesheet" href="preview.css">
+<style>
+input{color:var(--color-white-80);background:var(--color-secondary-800);border:1px solid var(--color-white-15);border-radius:12px;width:100%;min-height:42px;font-size:.875rem;line-height:1.3;text-align:center;padding:10px 12px;box-sizing:border-box;font-family:'Noto Sans',sans-serif;outline:none;}
+input::placeholder{color:var(--color-white-50);}
+input.focus{border-color:var(--color-primary-60);}
+input.invalid{border-color:var(--color-error-500);}
+.field{position:relative;width:100%;}
+.eyebrow{position:absolute;top:10px;left:14px;font-size:.6875rem;font-weight:700;text-transform:uppercase;color:var(--color-white-60);pointer-events:none;}
+.limits{position:absolute;top:9px;right:9px;display:flex;gap:4px;}
+.chip{display:inline-flex;align-items:center;justify-content:center;min-width:2rem;height:19px;padding:0 6px;font-size:.625rem;font-weight:600;text-transform:uppercase;color:var(--color-white-60);background:transparent;border:1px solid var(--color-white-10);border-radius:999rem;}
+.amount{font-size:28px;text-align:right;padding-top:32px;padding-bottom:16px;}
+</style></head>
+<body><div class="card">
+  <div class="card-row" style="gap:14px;">
+    <div class="field" style="flex:1;">
+      <div class="eyebrow">SEND</div>
+      <div class="limits"><span class="chip">MIN</span><span class="chip">MAX</span></div>
+      <input class="amount" value="0.00120000">
+    </div>
+    <div class="field" style="flex:1;">
+      <div class="eyebrow">RECEIVE</div>
+      <div class="limits"><span class="chip">MIN</span><span class="chip">MAX</span></div>
+      <input class="amount focus" value="0.00118420">
+    </div>
+  </div>
+  <div class="card-row" style="gap:14px;">
+    <input placeholder="lnbc1pjxq...">
+    <input class="invalid" value="bc1q-invalid-address">
+  </div>
+  <div style="font-size:11px;color:var(--color-white-50);">amount input · default · focused (yellow-60 border) · invalid (red-500 border)</div>
+</div></body></html>

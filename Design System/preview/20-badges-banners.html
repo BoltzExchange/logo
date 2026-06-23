@@ -1,0 +1,28 @@
+<!doctype html>
+<!-- @dsCard group="Components" name="Banners & status pills" subtitle="Yellow & error banner + network / status pills" viewport="700x200" -->
+<html boltz-theme="default">
+<head><meta charset="utf-8"><link rel="stylesheet" href="preview.css">
+<style>
+.banner{padding:5px;font-size:18px;background:var(--color-primary);color:var(--color-secondary-600);text-align:center;font-weight:600;}
+.banner a{text-decoration:underline;text-transform:uppercase;color:currentColor;display:inline-flex;align-items:center;gap:.4rem;}
+.banner.err{background:var(--color-error-500);color:#fff;}
+.netpill{display:inline-flex;align-items:center;height:24px;padding:0 10px;border-radius:8px;font-size:12px;font-weight:700;background:var(--color-secondary-100);color:var(--color-secondary-700);text-transform:uppercase;}
+.netpill.pro{background:var(--color-primary);}
+.status{display:inline-flex;align-items:center;height:24px;padding:0 10px;border-radius:8px;font-size:12px;font-weight:600;color:var(--color-text);}
+.s-ok{background:var(--color-success-500);}
+.s-err{background:var(--color-error-500);}
+.s-pend{background:var(--color-tertiary);}
+</style></head>
+<body><div class="card">
+  <div class="banner">BETA — USE WITH CAUTION!</div>
+  <div class="banner err">API is offline — please try again later</div>
+  <div class="card-row" style="gap:10px;">
+    <span class="netpill">REGTEST</span>
+    <span class="netpill" style="background:var(--color-success-400);color:var(--color-text);">MAINNET</span>
+    <span class="netpill pro">PRO</span>
+    <span class="status s-ok">SETTLED</span>
+    <span class="status s-pend">QUOTE.AVAILABLE</span>
+    <span class="status s-err">EXPIRED</span>
+  </div>
+  <div class="muted" style="font-size:11px;">banner row (yellow / error-500) · network pill · swap-status pills (success / tertiary / error)</div>
+</div></body></html>

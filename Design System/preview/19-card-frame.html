@@ -1,0 +1,23 @@
+<!doctype html>
+<!-- @dsCard group="Components" name="Card & swap frame" subtitle="Swap .frame with ambient glow + .card for products" viewport="700x260" -->
+<html boltz-theme="default">
+<head><meta charset="utf-8"><link rel="stylesheet" href="preview.css"></head>
+<body><div class="card" style="background: var(--color-secondary-600);">
+  <div class="card-row" style="gap:18px; align-items:stretch;">
+    <!-- frame · the canonical swap card -->
+    <div style="flex:1; max-width: 320px; background: var(--color-secondary-700); border:1px solid var(--color-white-15); border-left:0; border-right:0; padding: 18px 16px; box-shadow: 0 0 40px var(--color-primary-glow);">
+      <div style="font-size:11px; text-transform: uppercase; color: var(--color-white-60); font-weight: 700;">SEND · BTC</div>
+      <div style="font-size:24px; text-align:right; margin-top: 6px;">0.00120000</div>
+      <hr style="margin: 12px 0; border: none; height: 1px; background: var(--color-white-15);">
+      <div style="font-size:11px; text-transform: uppercase; color: var(--color-white-60); font-weight: 700;">RECEIVE · ⚡ LN</div>
+      <div style="font-size:24px; text-align:right; margin-top: 6px;">118,420 sat</div>
+      <button style="margin-top:14px;width:100%;min-height:42px;border-radius:12px;background:var(--color-primary);color:var(--color-secondary-700);font-weight:bold;border:none;cursor:pointer;">Create Swap</button>
+    </div>
+    <!-- product card -->
+    <div style="flex:1; max-width: 280px; background: var(--color-secondary-900); border: 1px solid var(--color-white-05); border-radius: 12px; padding: 1.5rem 1.5rem; box-shadow: 2px 4px 10px var(--color-black-20);">
+      <h4 style="margin:0; color: var(--color-link); font-size: 18px; font-weight: bold;">Boltz Pro →</h4>
+      <p style="margin: 8px 0 0; color: var(--color-white-50); font-size: 14px; line-height: 1.5;">Earn sats for swapping Bitcoin in directions that help balance liquidity.</p>
+    </div>
+  </div>
+  <div class="muted" style="font-size:11px;">left: <span class="mono">.frame</span> (swap card, 0px side borders, ambient glow) · right: <span class="mono">.card</span> (product card, 12px radius, soft shadow)</div>
+</div></body></html>

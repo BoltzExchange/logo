@@ -1,0 +1,262 @@
+/* ============================================================
+   Boltz Design System — colors + type
+   ------------------------------------------------------------
+   Lifted from boltz-web-app/src/style/theme.scss + index.scss.
+   Two themes ship: [boltz-theme="default"] (yellow on navy) and
+   [boltz-theme="pro"] (burnt-orange on near-black). Default is
+   applied to :root automatically.
+   ============================================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700;800&family=Noto+Sans+Mono:wght@400;500;700&display=swap");
+/* NOTE: substitution — production app uses @fontsource/noto-sans
+   and @fontsource/noto-mono self-hosted. Google Fonts has the same
+   families. Drop the local .woff2s into fonts/ and rewrite this
+   @import to switch. */
+
+:root {
+    /* ---- structural ---- */
+    --border-radius-sm: 8px;
+    --border-radius-md: 12px;
+    --border-radius-lg: 16px;
+    --border-radius-pill: 999rem;
+
+    /* ---- base palette (theme-agnostic) ---- */
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-btc-orange: #f7931a;
+    --color-light-gray: #d0d0d0;
+    --color-medium-gray: #545c65;
+    --color-darker-gray: #191919;
+
+    /* official brand swatches */
+    --color-boltz-yellow: #e6c826; /* canonical brand yellow */
+    --color-boltz-blue:   #081e36; /* canonical brand navy */
+
+    /* alpha ramps — used everywhere in the codebase */
+    --color-white-05: color-mix(in srgb, var(--color-white) 5%,  transparent);
+    --color-white-10: color-mix(in srgb, var(--color-white) 10%, transparent);
+    --color-white-15: color-mix(in srgb, var(--color-white) 15%, transparent);
+    --color-white-25: color-mix(in srgb, var(--color-white) 25%, transparent);
+    --color-white-30: color-mix(in srgb, var(--color-white) 30%, transparent);
+    --color-white-50: color-mix(in srgb, var(--color-white) 50%, transparent);
+    --color-white-60: color-mix(in srgb, var(--color-white) 60%, transparent);
+    --color-white-80: color-mix(in srgb, var(--color-white) 80%, transparent);
+    --color-white-90: color-mix(in srgb, var(--color-white) 90%, transparent);
+
+    --color-black-10: color-mix(in srgb, var(--color-black) 10%, transparent);
+    --color-black-20: color-mix(in srgb, var(--color-black) 20%, transparent);
+    --color-black-30: color-mix(in srgb, var(--color-black) 30%, transparent);
+    --color-black-40: color-mix(in srgb, var(--color-black) 40%, transparent);
+    --color-black-50: color-mix(in srgb, var(--color-black) 50%, transparent);
+
+    /* charting */
+    --color-chart-purple: #a648b7;
+    --color-chart-green:  #48b789;
+    --color-chart-blue:   #559cb6;
+    --color-grid:         #dddddd10;
+
+    /* fee semantics (used in fee comparison chart) */
+    --color-regular-fee:  #c334dd;
+    --color-negative-fee: #11c87c;
+    --color-lower-fee:    #23a7d7;
+
+    /* terminal accents */
+    --color-terminal-green: #9ece6a;
+    --color-terminal-blue:  #7aa2f7;
+    --color-terminal-cyan:  #449dab;
+
+    --color-error: #ff4444;
+
+    /* ---- typography scale (semantic) ---- */
+    --font-sans: "Noto Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --font-mono: "Noto Sans Mono", "Noto Mono", ui-monospace, monospace;
+
+    /* body baseline (from index.scss: 14px / 1.45) */
+    --text-base-size: 14px;
+    --text-base-line: 1.45;
+
+    /* type scale, paired with how the codebase uses each */
+    --text-xs:   0.6875rem; /* 11px — eyebrow / over-label    */
+    --text-sm:   0.75rem;   /* 12px — captions, badges        */
+    --text-md:   0.875rem;  /* 14px — body, buttons, inputs   */
+    --text-lg:   1rem;      /* 16px — long-form paragraph     */
+    --text-xl:   1.2rem;    /* 19px — card h4                 */
+    --text-2xl:  1.4rem;    /* 22px — section sub-headers     */
+    --text-3xl:  2rem;      /* 32px — page h1 on /products    */
+    --text-4xl:  3rem;      /* 48px — h2 on /products         */
+    --text-hero: 64px;      /* 64px — homepage gradient h1    */
+
+    --leading-tight: 1.05;
+    --leading-snug:  1.2;
+    --leading-body:  1.45;
+    --leading-prose: 1.5;
+
+    /* weights actually used in the codebase */
+    --weight-regular: 400;
+    --weight-medium:  500;
+    --weight-semi:    550; /* asset-text uses 550 */
+    --weight-bold:    700;
+    --weight-heavy:   800; /* big gradient headlines */
+}
+
+/* ============================================================
+   Default theme — homepage, swap UI, marketing
+   Background is the dark-navy secondary-600.
+   ============================================================ */
+:root,
+:root[boltz-theme="default"] {
+    --color-primary:         #e8cb2b; /* brand yellow as used in CSS */
+    --color-primary-60:      color-mix(in srgb, var(--color-primary) 60%, transparent);
+    --color-primary-lighter: #fee86b;
+    --color-primary-glow:    color-mix(in srgb, var(--color-primary) 40%, transparent);
+
+    --color-secondary-100: #d0d4d9;
+    --color-secondary-200: #a1a9b2;
+    --color-secondary-300: #727e8c;
+    --color-secondary-500: #1e2d3c;
+    --color-secondary-600: #12253a; /* body bg */
+    --color-secondary-700: #0f1f30; /* card / nav bg */
+    --color-secondary-800: #091625; /* inputs, deeper surfaces */
+    --color-secondary-900: #09141f; /* deepest surface */
+
+    --color-tertiary: #533180;
+
+    --color-text:      #d7dee4;
+    --color-text-glow: color-mix(in srgb, var(--color-text) 35%, transparent);
+    --color-dark-gray: #17222e;
+
+    /* hero headline gradient (yellow → blue) */
+    --color-hero-gradient-1: #eac806;
+    --color-hero-gradient-2: #2084f6;
+
+    --color-error-500:   #8b0000;
+    --color-error-700:   #530000;
+    --color-success-400: #419a41;
+    --color-success-500: #246c24;
+    --color-success-700: #003300;
+
+    --color-link:       #4fadc2;
+    --color-link-hover: #70cde2;
+    --color-link-glow:  color-mix(in srgb, var(--color-link-hover) 80%, transparent);
+
+    --color-bg:         var(--color-secondary-600);
+    --color-bg-elevated:var(--color-secondary-700);
+    --color-bg-input:   var(--color-secondary-800);
+
+    color-scheme: dark;
+}
+
+/* ============================================================
+   Pro theme — high-volume / market-maker surface.
+   Switch by adding boltz-theme="pro" to <html> or a wrapper.
+   ============================================================ */
+:root[boltz-theme="pro"] {
+    --color-primary:         #c47835;
+    --color-primary-60:      color-mix(in srgb, var(--color-primary) 60%, transparent);
+    --color-primary-lighter: #e8a268;
+    --color-primary-glow:    color-mix(in srgb, var(--color-primary) 80%, transparent);
+
+    --color-secondary-100: #d7deec;
+    --color-secondary-200: #c8cfd6;
+    --color-secondary-300: #9fa8b1;
+    --color-secondary-500: #1f262e;
+    --color-secondary-600: #14191e;
+    --color-secondary-700: #0d1216;
+    --color-secondary-800: #090d11;
+    --color-secondary-900: #070a0e;
+
+    --color-tertiary: #4f1d85;
+
+    --color-text:      #9fa8b1;
+    --color-text-glow: color-mix(in srgb, var(--color-text) 35%, transparent);
+    --color-dark-gray: #191c1f;
+
+    /* hero headline gradient (btc-orange → pro orange) */
+    --color-hero-gradient-1: var(--color-btc-orange);
+    --color-hero-gradient-2: #c47835;
+
+    --color-error-500:   #77211b;
+    --color-error-700:   #570d1c;
+    --color-success-400: #2c913f;
+    --color-success-500: #0a5217;
+    --color-success-700: #043017;
+
+    --color-link:       #b56f31;
+    --color-link-hover: #da9457;
+    --color-link-glow:  color-mix(in srgb, var(--color-link-hover) 80%, transparent);
+}
+
+/* ============================================================
+   Semantic element styles — drop these on a page and you get
+   the boltz typographic baseline for free.
+   ============================================================ */
+html, body {
+    background: var(--color-bg, var(--color-secondary-600));
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    font-size: var(--text-base-size);
+    line-height: var(--text-base-line);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+    background: var(--color-primary);
+    color: var(--color-secondary-700);
+}
+
+/* The single most-recognizable Boltz mark: the gradient hero h1. */
+.headline,
+h1.boltz-headline {
+    font-size: var(--text-hero);
+    line-height: var(--leading-tight);
+    font-weight: var(--weight-heavy);
+    background: linear-gradient(
+        20deg,
+        var(--color-hero-gradient-1) 10%,
+        var(--color-hero-gradient-2) 90%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin: 24px 12px 12px;
+}
+.headline small {
+    display: block;
+    font-size: 18px;
+    font-weight: var(--weight-regular);
+    color: var(--color-white-90);
+    line-height: var(--leading-snug);
+    max-width: 661px;
+    margin: 21px auto 34px;
+    -webkit-text-fill-color: var(--color-white-90); /* override gradient clip */
+}
+
+h2.section-headline {
+    font-size: 26px;
+    text-transform: uppercase;
+    font-weight: var(--weight-regular);
+    margin: 62px 12px 12px;
+}
+
+h3 { color: var(--color-primary); margin: 0; }
+h4 { color: var(--color-text);    margin: 0; font-size: var(--text-xl); }
+
+.monospace, code, kbd, samp, pre {
+    font-family: var(--font-mono);
+}
+
+hr {
+    margin: 14px 0;
+    border: none;
+    height: 1px;
+    background: var(--color-white-15);
+}
+
+.text-muted { color: var(--color-white-50); font-size: var(--text-sm); }
+
+/* mobile resize for the hero headline */
+@media (max-width: 768px) {
+    .headline,
+    h1.boltz-headline { font-size: 36px; margin: 62px 12px 12px; }
+}
